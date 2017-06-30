@@ -1,7 +1,8 @@
 <?php
 
 Route::get('posts', function () {
-	return App\Models\Post::all();
+	$posts = App\Models\Post::all();
+	return view('posts.index', compact('posts'));
 });
 
 Route::get('videos', function () {
